@@ -1,5 +1,7 @@
 # ETL-Project
 
+### Open the "Master - Combined Notebooks" to view the final code of the project in Jupyter notebook.
+
 # Data Engineering and Visualization ETL Project
 ## Abear Awadallah, Brandon Wright, Parin Mody, Sajani Menon
 
