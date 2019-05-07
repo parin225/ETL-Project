@@ -8,7 +8,7 @@ Our ETL pipeline enables media-service analysts at the newly start-up "MoGo" (Mo
 
 ##### Example Step to Run the Pipeline:
   1. Open the notebook
-  2. Uncomment the username and password, then input your username and password in assigned variables at the top of the   notebook
+  2.
   3. Run the connection string variable "username:password@127.0.0.01/movies>charset=utf8mb4" and run the create engine variable "create_engine(f'mysql+pymysql://{connection_string}', pool_size=10, max_overflow=50)" to connect the SQL and the databse. 
   4. Run "tmdb_movies_df.to_sql(name='movielist', con=engine, if_exists='append', index=False)" to load the tmdb dataframe into the database and to create a table named movielist within the database.
   5. Run "imdb_movies_df.to_sql(name='ratings', con=engine, if_exists='append', index=False)" to load the imdb dataframe into the database and to create a table named ratings within the database.
