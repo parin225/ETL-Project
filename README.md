@@ -7,8 +7,8 @@
 Our ETL pipeline enables media-service analysts at the newly start-up "MoGo" (Movie on the Go) to determine what popular movies to select for their website. We are using information such as ratings, votings, and other additional information such as languages, genres, directors, actors, and the length of the movies from IMDB, TMDB and Director/Actor CSV's both derived from Kaggle. We provide our data into a SQL database to determine which movies should be selected based on ratings (movie critics) and votings (non-affiliated users) and could provide the most value for the website based on other information such as how current or old the movie is, the genre of the movies, languages of the movies, length of movies and etc.
 
 ##### Example Step to Run the Pipeline:
-  1. Open the notebook
-  2. Input your username and password in the connection string where it says "username" and "password"
+  1. Open the notebook.
+  2. Input your username and password in the connection string where it says "username" and "password".
   3. Run the connection string variable "username:password@127.0.0.01/movies>charset=utf8mb4" and run the create engine variable "create_engine(f'mysql+pymysql://{connection_string}', pool_size=10, max_overflow=50)" to connect the SQL and the databse. 
   4. Run "tmdb_movies_df.to_sql(name='movielist', con=engine, if_exists='append', index=False)" to load the tmdb dataframe into the database and to create a table named movielist within the database.
   5. Run "imdb_movies_df.to_sql(name='ratings', con=engine, if_exists='append', index=False)" to load the imdb dataframe into the database and to create a table named ratings within the database.
